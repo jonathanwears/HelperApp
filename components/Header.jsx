@@ -1,12 +1,14 @@
 import React from 'react';
-import {View, Text, StyleSheet, Pressable, Alert} from 'react-native';
+import { View, Text, StyleSheet,Button } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 function Header({ title }) {
 
-  return(
+  return (
     <View style={styles.container}>
       <Text style={styles.text}>{title}</Text>
+      <Button title="clear" onPress={ () => AsyncStorage.clear()}></Button>
     </View>
   );
 };

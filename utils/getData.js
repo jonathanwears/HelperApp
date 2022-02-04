@@ -1,13 +1,18 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Alert } from 'react-native';
 
 async function getData(name) {
   try {
     const nameValue = await AsyncStorage.getItem(name);
-    if(nameValue === null) {return} 
+    if(nameValue === null) {
+      console.log("getdata return 0");
+      return 0; 
+    } 
+    else {
+      return nameValue
+    }
   }
   catch (error) {
-    Alert.alert('failed to getdata');
+    console.log('failed to getdata');
   }
 
 }

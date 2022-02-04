@@ -4,25 +4,26 @@ import { saveData, getData } from '../utils/index';
 
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
-  const [totalNum, setTotalNum] = useState(0);
+  const [totalNum, setTotalNum] = useState();
 
-
-  useEffect((entry) => {
+  useEffect(() => {
     async function fetchData() {
-      const fetchData = await getData(entry);
-      setTotalNum(fetchData);
+      const fetchData = await getData(String(entry));
+      setTotalNum(Number(fetchData));
     }
+    fetchData();
   }, [])
 
   // SaveData useEffect
-  useEffect((entry, totalNum) => {
+  useEffect(() => {
     //stop save call on mounting 
     if (isInitalMount.current === true) {
        isInitalMount.current = false
     } else {
-      async function saveData() {
-        const getData = await saveData(entry, totalNum)
+      async function saveNewValue() {
+        const getData = await saveData(String(entry), totalNum)
       }
+       saveNewValue();
     }
   }, [totalNum])
 
@@ -65,6 +66,5 @@ const styles = StyleSheet.create({
     fontSize: 25,
   }
 });
-
 
 export default Counter;

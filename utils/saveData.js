@@ -1,12 +1,12 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Alert } from 'react-native';
 
 async function saveData(name, value) {
   try {
     const jsonValue = JSON.stringify(value);
+    console.log(jsonValue)
     await AsyncStorage.setItem(name, jsonValue);
   }catch (error) {
-    Alert.alert('savedata failure')
+    console.log('savedata failure')
   }
 
 }

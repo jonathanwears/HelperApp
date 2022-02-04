@@ -11,9 +11,8 @@ function CountersArea() {
 
     array.map(entry => {
       return (
-          <Counter style={styles.container} key={uuid()} entry={entry} />
+        <Counter style={styles.container} key={uuid()} entry={entry} />
       )
-       
     })
   );
 };
