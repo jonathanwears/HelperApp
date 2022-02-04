@@ -13,9 +13,12 @@ function Header({ title }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'darkslateblue',
-    height: 100,
+    backgroundColor: 'violet',
+    height: 150,
     padding: 35,
+    paddingBottom: 45,
+    borderBottomLeftRadius: 5,
+    borderBottomEndRadius: 5,
   },
   text: {
     color: 'white',

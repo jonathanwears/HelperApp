@@ -1,11 +1,33 @@
-import react, { useState } from "react";
+import react, { useState, useEffect, useRef } from "react";
 import { View, StyleSheet, Button, Text, Alert } from 'react-native';
+import { saveData, getData } from '../utils/index';
 
 function Counter({ entry }) {
+  const isInitalMount = useRef(true);
   const [totalNum, setTotalNum] = useState(0);
 
+
+  useEffect((entry) => {
+    async function fetchData() {
+      const fetchData = await getData(entry);
+      setTotalNum(fetchData);
+    }
+  }, [])
+
+  // SaveData useEffect
+  useEffect((entry, totalNum) => {
+    //stop save call on mounting 
+    if (isInitalMount.current === true) {
+       isInitalMount.current = false
+    } else {
+      async function saveData() {
+        const getData = await saveData(entry, totalNum)
+      }
+    }
+  }, [totalNum])
+
   function increment(event) {
-    
+
     let num = 0;
 
     switch (event) {
@@ -13,7 +35,7 @@ function Counter({ entry }) {
         break
       case '-': num = totalNum - 1;
         break
-      default: Alert.alert('outside switch\'s operation + , - ' )
+      default: Alert.alert('outside switch\'s operation + , - ')
     }
 
     if (num < 0) { return };
