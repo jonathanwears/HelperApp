@@ -23,32 +23,32 @@ function Counter({ entry }) {
       async function saveNewValue() {
         const getData = await saveData(String(entry), totalNum)
       }
-       saveNewValue();
+       setTimeout(saveNewValue,1000);
     }
   }, [totalNum])
 
   function increment(event) {
 
-    let num = 0;
+    let newCounterNum = 0;
 
     switch (event) {
-      case '+': num = totalNum + 1;
+      case '+': newCounterNum = totalNum + 1;
         break
-      case '-': num = totalNum - 1;
+      case '-': newCounterNum = totalNum - 1;
         break
-      default: Alert.alert('outside switch\'s operation + , - ')
+      default: console.log('outside switch\'s operation + , - ')
     }
 
-    if (num < 0) { return };
-    setTotalNum(num);
+    if (newCounterNum < 0) { return };
+    setTotalNum(newCounterNum);
     // check if new total is less than 0 then set state.
   }
 
   return (
     <View style={styles.container}>
-      <Button title={`${entry} + 1`} onPress={() => increment('+')} />
+      <Button title={'up'} onPress={() => increment('+')} />
       <Text style={styles.text}>{totalNum}</Text>
-      <Button title={`${entry} - 1`} onPress={() => increment('-')} />
+      <Button title={'down'} onPress={() => increment('-')} />
     </View>
   );
 
