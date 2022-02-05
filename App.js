@@ -8,8 +8,7 @@ export default function App() {
   
   return (
     <View style={styles.container}>
-    <Header title= {title} />
-      <Text style={styles.text}>test</Text>
+      <Header title= {title} />
       <StatusBar style="auto" />
       <CountersArea />
     </View>
@@ -18,11 +17,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor:'black',
+    backgroundColor: 'black',
   },
-  text: {
-    color: 'white'
-  }
 });
 

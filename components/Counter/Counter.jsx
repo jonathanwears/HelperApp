@@ -1,6 +1,7 @@
 import react, { useState, useEffect, useRef } from "react";
-import { View, StyleSheet, Button, Text, Alert } from 'react-native';
-import { saveData, getData } from '../utils/index';
+import { View, StyleSheet, Button, Text } from 'react-native';
+import { saveData, getData } from '../../utils/index';
+import TitleCounter from "./TitleCounter";
 
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
@@ -46,6 +47,7 @@ function Counter({ entry }) {
 
   return (
     <View style={styles.container}>
+      <TitleCounter entry={entry}/>
       <Button title={'up'} onPress={() => increment('+')} />
       <Text style={styles.text}>{totalNum}</Text>
       <Button title={'down'} onPress={() => increment('-')} />
@@ -56,10 +58,7 @@ function Counter({ entry }) {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
-    backgroundColor: 'white',
-    padding: 25,
-    width: 100,
+    backgroundColor: 'yellow',
   },
   text: {
     textAlign: 'center',
