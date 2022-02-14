@@ -2,14 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import Header from './components/Header';
 import CountersArea from './components/CountersArea';
+import Udometer from './components/Udometer/Udometer';
 
 export default function App() {
-  const title = 'Title';
   
   return (
     <View style={styles.container}>
-      <Header title= {title} />
+      <Header />
       <StatusBar style="auto" />
+      <Udometer />
       <CountersArea />
     </View>
   );
@@ -17,7 +18,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'black',
+    
   },
 });
 

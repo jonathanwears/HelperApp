@@ -21,7 +21,12 @@ function CountersArea() {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-  },
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    borderRadius: 10,
+    backgroundColor: 'blue',
+    
+    },
   text: {
     textAlign: 'center',
     fontSize: 25,

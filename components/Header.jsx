@@ -3,11 +3,11 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-function Header({ title }) {
+function Header() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{title}</Text>
+      <Text style={styles.text}>Helper App</Text>
       <Button title="clear" onPress={ () => AsyncStorage.clear()}></Button>
     </View>
   );
@@ -16,9 +16,9 @@ function Header({ title }) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'violet',
-    height: 150,
+    height: 300,
     padding: 35,
-    paddingBottom: 45,
+    paddingBottom: 25,
     borderBottomLeftRadius: 5,
     borderBottomEndRadius: 5,
   },

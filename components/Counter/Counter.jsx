@@ -6,7 +6,7 @@ import TitleCounter from "./TitleCounter";
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
   const [totalNum, setTotalNum] = useState();
-
+    
   useEffect(() => {
     async function fetchData() {
       const fetchData = await getData(String(entry));
@@ -19,6 +19,7 @@ function Counter({ entry }) {
   useEffect(() => {
     //stop save call on mounting 
     if (isInitalMount.current === true) {
+      console.log("called from initialmount")
        isInitalMount.current = false
     } else {
       async function saveNewValue() {
@@ -58,12 +59,18 @@ function Counter({ entry }) {
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: "center",
     backgroundColor: 'yellow',
+    borderRadius: 5,
+    width: 100,
+    margin:1,
+    
+    
   },
   text: {
     textAlign: 'center',
     fontSize: 25,
-  }
+  },
 });
 
 export default Counter;
