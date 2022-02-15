@@ -7,6 +7,7 @@ import useKilometers from '../../utils/customHooks/useKilometers';
 function Udometer() {
 
   const [startKm, setStartKm] = useKilometers('startKm');
+  const [finishKm, setFinishKm] = useKilometers('finishKm');
   // const [finishKm, setFinishKm] = useState(0);
   // const isInitialMount = useRef(true);
 
@@ -62,7 +63,7 @@ function Udometer() {
   return (
     <View>
       <KmInput name='startKm' updateKm={updateKm} km={startKm} />
-      {/* <KmInput name='finishKm' km={finishKm} /> */}
+      <KmInput name='finishKm' updateKm={updateKm} km={finishKm} />
     </View>
   );
 }
