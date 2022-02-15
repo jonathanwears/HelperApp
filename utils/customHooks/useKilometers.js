@@ -1,21 +1,21 @@
-import {useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { getData, saveData } from '../index';
 
 export default function usekilometers(name) {
 
-const [kilometer, setKilometer] = useState();
-const isInitialMount = useRef(true);
+  const [kilometer, setKilometer] = useState();
+  const isInitialMount = useRef(true);
 
-// get data
-useEffect(() => {
-  async function fetchData() {
-    const fetchData = await getData(String(name));
-    setKilometer(fetchData);
-  }
-  fetchData();
-}, []);
+  // get data
+  useEffect(() => {
+    async function fetchData() {
+      const fetchData = await getData(String(name));
+      setKilometer(fetchData);
+    }
+    fetchData();
+  }, []);
 
-//save data
+  //save data
   useEffect(() => {
     //stop save call on mounting 
     if (isInitialMount.current === true) {
@@ -29,5 +29,5 @@ useEffect(() => {
     }
   }, [kilometer])
 
-  return [kilometer, setKilometer]; 
+  return [kilometer, setKilometer];
 }

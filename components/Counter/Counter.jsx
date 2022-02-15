@@ -6,7 +6,7 @@ import TitleCounter from "./TitleCounter";
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
   const [totalNum, setTotalNum] = useState();
-    
+
   useEffect(() => {
     async function fetchData() {
       const fetchData = await getData(String(entry));
@@ -20,15 +20,15 @@ function Counter({ entry }) {
     //stop save call on mounting 
     if (isInitalMount.current === true) {
       console.log("called from initialmount")
-       isInitalMount.current = false
+      isInitalMount.current = false
     } else {
       async function saveNewValue() {
         const getData = await saveData(String(entry), totalNum)
       }
-       setTimeout(saveNewValue,1000);
+      setTimeout(saveNewValue, 1000);
     }
   }, [totalNum])
-  
+
   function increment(event) {
 
     let newCounterNum = 0;
@@ -48,13 +48,12 @@ function Counter({ entry }) {
 
   return (
     <View style={styles.container}>
-      <TitleCounter entry={entry}/>
+      <TitleCounter entry={entry} />
       <Button title={'up'} onPress={() => increment('+')} />
       <Text style={styles.text}>{totalNum}</Text>
       <Button title={'down'} onPress={() => increment('-')} />
     </View>
   );
-
 }
 
 const styles = StyleSheet.create({
@@ -63,9 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow',
     borderRadius: 5,
     width: 100,
-    margin:1,
-    
-    
+    margin: 1,
   },
   text: {
     textAlign: 'center',
