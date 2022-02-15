@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 async function getData(name) {
-
+  console.log(name)
   // returns a string if not null
   try {
     const nameValue = await AsyncStorage.getItem(name);
@@ -10,7 +10,6 @@ async function getData(name) {
       return 0; 
     } 
     else {
-      console.log("returned value " + nameValue)
       return nameValue
     }
   }

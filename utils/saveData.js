@@ -1,7 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 async function saveData(name, value) {
-console.log('saveData ' + name + ' ' + value)
   // Sends values as Strings
   try {
     const jsonValue = JSON.stringify(value);

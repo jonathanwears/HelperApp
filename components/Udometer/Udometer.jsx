@@ -5,17 +5,18 @@ import KmInput from './KmInput';
 
 function Udometer() {
   const [startKm, setStartKm] = useState();
-  
-  useEffect(() => {
-    async function fetchData() {
-      const fetchData = await getData('startKm');
-      setStartKm(Number(fetchData));
-    }
-    fetchData();
-  },[]);
-
   const [finishKm, setFinishKm] = useState(0);
   const isInitialMount = useRef(true);
+
+  useEffect(() => {
+    async function fetchData() {
+      const fetchDataStart = await getData('startKm');
+      const fetchDataFinish = await getData('finishKm')
+      setStartKm(fetchDataStart);
+      setFinishKm(fetchDataFinish);
+    }
+    fetchData();
+  }, []);
 
   // SaveData useEffect
   useEffect(() => {
@@ -23,18 +24,31 @@ function Udometer() {
     if (isInitialMount.current === true) {
       isInitialMount.current = false
     } else {
+      const startKmInt = Number(startKm)
       async function saveNewValue() {
-     
-        const getData = await saveData('startKm', startKm)
+        const getData = await saveData('startKm', startKmInt)
       }
       setTimeout(saveNewValue, 1000);
     }
   }, [startKm])
 
+  useEffect(() => {
+    //stop save call on mounting 
+    if (isInitialMount.current === true) {
+      isInitialMount.current = false
+    } else {
+      const finishKmInt = Number(finishKm)
+      async function saveNewValue() {
+        const getData = await saveData('finishKm', finishKmInt)
+      }
+      setTimeout(saveNewValue, 1000);
+    }
+  }, [finishKm])
+
   function updateKm(event, newNumber) {
-    if(newNumber === NaN) return; 
+    if (newNumber === NaN) return;
     if (event === 'startKm') {
-    setStartKm(newNumber);
+      setStartKm(newNumber);
     }
     else if (event === 'finishKm') {
       setFinishKm(newNumber);
@@ -44,10 +58,9 @@ function Udometer() {
   return (
     <View>
       <KmInput name='startKm' updateKm={updateKm} km={startKm} />
-      {/* <KmInput name='finishKm' updateKm={updateKm} km={finishKm} /> */}
+      <KmInput name='finishKm' updateKm={updateKm} km={finishKm} />
     </View>
   );
 }
 
-//SaveData useEffect
 export default Udometer;
