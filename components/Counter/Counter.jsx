@@ -28,7 +28,7 @@ function Counter({ entry }) {
        setTimeout(saveNewValue,1000);
     }
   }, [totalNum])
-
+  
   function increment(event) {
 
     let newCounterNum = 0;

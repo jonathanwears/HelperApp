@@ -11,7 +11,7 @@ export default function App() {
       <Header />
       <StatusBar style="auto" />
       <Udometer />
-      {/* <CountersArea /> */}
+      <CountersArea />
     </View>
   );
 }
