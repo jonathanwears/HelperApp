@@ -1,7 +1,8 @@
 import react, { useState, useEffect, useRef } from "react";
-import { View, StyleSheet, Button, Text } from 'react-native';
+import { View, StyleSheet, Button, Text, TouchableOpacity } from 'react-native';
 import { saveData, getData } from '../../utils/index';
 import TitleCounter from "./TitleCounter";
+import CustomButton from "../Buttons/CustomButton";
 
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
@@ -45,13 +46,13 @@ function Counter({ entry }) {
     setTotalNum(newCounterNum);
     // check if new total is less than 0 then set state.
   }
-
+// 
   return (
     <View style={styles.container}>
       <TitleCounter entry={entry} />
-      <Button title={'up'} onPress={() => increment('+')} />
+        <CustomButton name={'up'}  onPress={() => increment('+')}/>
       <Text style={styles.text}>{totalNum}</Text>
-      <Button title={'down'} onPress={() => increment('-')} />
+      <CustomButton name={'down'} onPress={() => increment('-')} />
     </View>
   );
 }
@@ -61,8 +62,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: 'yellow',
     borderRadius: 5,
-    width: 100,
-    margin: 1,
+    width: 125,
+    margin: 2,
   },
   text: {
     textAlign: 'center',

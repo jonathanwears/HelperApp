@@ -1,9 +1,9 @@
 import React from 'react';
 import { Pressable, Text, StyleSheet} from 'react-native';
-function CustomButton({ name }) {
+function CustomButton({ name, onPress }) {
 
   return (
-      <Pressable  
+      <Pressable  onPress={onPress}
       style={({ pressed }) => [
           {
             backgroundColor: pressed
@@ -22,15 +22,15 @@ const styles = StyleSheet.create({
   wrapper: {
     borderRadius: 5,
     alignItems: 'center',
-    padding: 5,
-    width: 50,
+    padding: 10,
     margin:2,
+    width: 100,
   },
   pressed: {
     backgroundColor: 'black',
   },
   text:{
-    fontSize:15,
+    fontSize:20,
   }
 });
 
