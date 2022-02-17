@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import CustomButton from './Buttons/CustomButton';
 
 function Header() {
 
@@ -9,6 +9,7 @@ function Header() {
     <View style={styles.container}>
       <Text style={styles.text}>Helper App</Text>
       <Button title="clear" onPress={ () => AsyncStorage.clear()}></Button>
+      <CustomButton></CustomButton>
     </View>
   );
 };

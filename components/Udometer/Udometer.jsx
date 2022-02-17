@@ -4,7 +4,6 @@ import KmInput from './KmInput';
 import useKilometers from '../../utils/customHooks/useKilometers';
 
 function Udometer() {
-
   const [startKm, setStartKm] = useKilometers('startKm');
   const [finishKm, setFinishKm] = useKilometers('finishKm');
   
