@@ -1,5 +1,6 @@
 import React from 'react';
-import { TextInput, Text } from 'react-native';
+import { TextInput } from 'react-native';
+import CounterTextStyle from '../../utils/Styles/CounterTextStyle';
 
 function KmInput({ name, updateKm, km }) {
 
@@ -9,13 +10,13 @@ function KmInput({ name, updateKm, km }) {
 
   return (
     <TextInput
+      style={CounterTextStyle.text}
       onChangeText={updateKmNum}
       keyboardType='number-pad'
       name={name}
     >
       {km}
     </TextInput> 
-
   )
 }
 

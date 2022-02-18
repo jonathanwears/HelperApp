@@ -5,21 +5,22 @@ import CountersArea from './components/CountersArea';
 import Udometer from './components/Udometer/Udometer';
 
 export default function App() {
-  
+
   return (
-    <ScrollView>
-       <View style={styles.container}>
-      <Header />
-      <StatusBar style="auto" />
-      <Udometer />
-      <CountersArea />
+    <View style={styles.container}>
+      <ScrollView>
+        <Header />
+        <StatusBar style="auto" />
+        <Udometer />
+        <CountersArea />
+      </ScrollView>
     </View>
-    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    
+    flex: 1,
+    backgroundColor: 'black',
   },
 });

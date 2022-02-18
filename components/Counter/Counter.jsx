@@ -1,13 +1,15 @@
 import react, { useState, useEffect, useRef } from "react";
-import { View, StyleSheet, Button, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { saveData, getData } from '../../utils/index';
 import TitleCounter from "./TitleCounter";
 import CustomButton from "../Buttons/CustomButton";
+import  CounterTextStyle  from "../../utils/Styles/CounterTextStyle";
 
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
   const [totalNum, setTotalNum] = useState();
-
+console.log(CounterTextStyle)
+  //fetch data
   useEffect(() => {
     async function fetchData() {
       const fetchData = await getData(String(entry));
@@ -16,7 +18,7 @@ function Counter({ entry }) {
     fetchData();
   }, [])
 
-  // SaveData useEffect
+  // SaveData 
   useEffect(() => {
     //stop save call on mounting 
     if (isInitalMount.current === true) {
@@ -30,6 +32,8 @@ function Counter({ entry }) {
     }
   }, [totalNum])
 
+
+  // increment Buttons sends a + or - to function. 
   function increment(event) {
 
     let newCounterNum = 0;
@@ -46,12 +50,12 @@ function Counter({ entry }) {
     setTotalNum(newCounterNum);
     // check if new total is less than 0 then set state.
   }
-// 
+  // 
   return (
     <View style={styles.container}>
       <TitleCounter entry={entry} />
-        <CustomButton name={'up'}  onPress={() => increment('+')}/>
-      <Text style={styles.text}>{totalNum}</Text>
+      <CustomButton name={'up'} onPress={() => increment('+')} />
+      <Text style={CounterTextStyle.text}>{totalNum}</Text>
       <CustomButton name={'down'} onPress={() => increment('-')} />
     </View>
   );
@@ -64,10 +68,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     width: 125,
     margin: 2,
-  },
-  text: {
-    textAlign: 'center',
-    fontSize: 25,
+    paddingTop: 10,
+    paddingBottom: 10,
   },
 });
 

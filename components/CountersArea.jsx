@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, Alert } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import 'react-native-get-random-values';
 import { v4 as uuid } from 'uuid';
 import Counter from './Counter/Counter';
@@ -24,13 +24,10 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     borderRadius: 10,
-    backgroundColor: 'blue',
-    
+    backgroundColor: '#2a2727',
+    padding: 10,
+    margin: 2,
     },
-  text: {
-    textAlign: 'center',
-    fontSize: 25,
-  }
 });
 
 export default CountersArea;

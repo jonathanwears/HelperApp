@@ -9,7 +9,6 @@ function Header() {
     <View style={styles.container}>
       <Text style={styles.text}>Helper App</Text>
       <Button title="clear" onPress={ () => AsyncStorage.clear()}></Button>
-      <CustomButton></CustomButton>
     </View>
   );
 };
