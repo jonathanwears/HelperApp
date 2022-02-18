@@ -64,7 +64,7 @@ console.log(CounterTextStyle)
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    backgroundColor: 'yellow',
+    backgroundColor: '#b8cfec',
     borderRadius: 5,
     width: 125,
     margin: 2,

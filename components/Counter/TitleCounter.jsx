@@ -6,12 +6,12 @@ function TitleCounter({ entry }) {
   return (
     <Text style={styles.text}>{entry}</Text>
   )
-
 }
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 15, 
+    fontSize: 20, 
+    paddingBottom: 10,
   }
 })
 
