@@ -4,7 +4,7 @@ import { saveData, getData } from '../../utils/index';
 import TitleCounter from "./TitleCounter";
 import CustomButton from "../Buttons/CustomButton";
 import  CounterTextStyle  from "../../utils/Styles/CounterTextStyle";
-import PlusUpCounterIcon from "../../utils/Styles/PlusUpCounterIcon";
+
 
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     width: 125,
     margin: 2,
-    paddingTop: 10,
+    paddingTop: 0,
     paddingBottom: 10,
   },
 });

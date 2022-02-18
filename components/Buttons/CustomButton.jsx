@@ -10,8 +10,8 @@ function CustomButton({ name, onPress }) {
       style={({ pressed }) => [
           {
             backgroundColor: pressed
-              ? 'rgb(210, 230, 255)'
-              : '#baffc9',
+              ? '#d2e6ff'
+              : '#82b1ed',
           },
           styles.wrapper]}>
         <Text style={styles.text}>
