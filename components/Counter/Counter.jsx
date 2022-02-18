@@ -4,11 +4,11 @@ import { saveData, getData } from '../../utils/index';
 import TitleCounter from "./TitleCounter";
 import CustomButton from "../Buttons/CustomButton";
 import  CounterTextStyle  from "../../utils/Styles/CounterTextStyle";
+import PlusUpCounterIcon from "../../utils/Styles/PlusUpCounterIcon";
 
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
   const [totalNum, setTotalNum] = useState();
-console.log(CounterTextStyle)
   //fetch data
   useEffect(() => {
     async function fetchData() {
@@ -54,9 +54,9 @@ console.log(CounterTextStyle)
   return (
     <View style={styles.container}>
       <TitleCounter entry={entry} />
-      <CustomButton name={'up'} onPress={() => increment('+')} />
+      <CustomButton name={'Up'} onPress={() => increment('+')} />
       <Text style={CounterTextStyle.text}>{totalNum}</Text>
-      <CustomButton name={'down'} onPress={() => increment('-')} />
+      <CustomButton name={'Down'} onPress={() => increment('-')} />
     </View>
   );
 }
