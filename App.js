@@ -1,8 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, StatusBar } from 'react-native';
 import Header from './components/Header';
 import CountersArea from './components/CountersArea';
 import Udometer from './components/Udometer/Udometer';
+import Hotbar from './components/Hotbar/Hotbar';
 
 export default function App() {
 
@@ -13,6 +13,7 @@ export default function App() {
         <StatusBar style="auto" />
         <Udometer />
         <CountersArea />
+        <Hotbar />
       </ScrollView>
     </View>
   );
@@ -21,6 +22,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'yellow',
+    position: 'relative',
   },
 });

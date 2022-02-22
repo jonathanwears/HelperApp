@@ -22,7 +22,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#baffc9"
+        "backgroundColor": "#111"
       },
       "package": "Helper.apk"
     },

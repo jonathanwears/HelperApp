@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, Text, StyleSheet } from 'react-native';
 import PlusUpCounterIcon from '../../utils/Styles/PlusUpCounterIcon';
-import MinusDownCounterIcon from '../../utils/Styles/MinusDownCounterIcon copy';
+import MinusDownCounterIcon from '../../utils/Styles/MinusDownCounterIcon';
 
 function CustomButton({ name, onPress }) {
 
