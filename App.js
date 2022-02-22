@@ -1,7 +1,7 @@
 import { StyleSheet, View, ScrollView, StatusBar } from 'react-native';
 import Header from './components/Header';
 import CountersArea from './components/CountersArea';
-import Udometer from './components/Udometer/Udometer';
+import UdometerArea from './components/Udometer/UdometerArea';
 import Hotbar from './components/Hotbar/Hotbar';
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
       <ScrollView>
         <Header />
         <StatusBar style="auto" />
-        <Udometer />
+        <UdometerArea />
         <CountersArea />
         <Hotbar />
       </ScrollView>
