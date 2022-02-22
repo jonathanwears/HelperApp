@@ -5,7 +5,6 @@ import TitleCounter from "./TitleCounter";
 import CustomButton from "../Buttons/CustomButton";
 import  CounterTextStyle  from "../../utils/Styles/CounterTextStyle";
 
-
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
   const [totalNum, setTotalNum] = useState();
@@ -50,7 +49,7 @@ function Counter({ entry }) {
     setTotalNum(newCounterNum);
     // check if new total is less than 0 then set state.
   }
-  // 
+  
   return (
     <View style={styles.container}>
       <TitleCounter entry={entry} />

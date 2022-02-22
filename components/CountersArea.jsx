@@ -1,14 +1,15 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import 'react-native-get-random-values';
 import { v4 as uuid } from 'uuid';
 import Counter from './Counter/Counter';
 import ComponentNames from '../utils/json/ComponentNames.json';
+import BasicAreaStyle from '../utils/Styles/BasicAreaStyle';
 
 function CountersArea() {
 
   return (
-    <View style={styles.container}>
+    <View style={BasicAreaStyle.container}>
       {ComponentNames.counterNames.map(entry => {
         return (
           <Counter key={uuid()} entry={entry} />
@@ -17,17 +18,5 @@ function CountersArea() {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    borderRadius: 10,
-    backgroundColor: '#2a2727',
-    padding: 10,
-    margin: 2,
-    },
-});
 
 export default CountersArea;
