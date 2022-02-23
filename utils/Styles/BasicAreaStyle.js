@@ -8,7 +8,7 @@ const BasicAreaStyle = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     borderRadius: 10,
-    backgroundColor: '#2a2727',
+    backgroundColor: '#262626',
     padding: 10,
     margin: 2,
   },
