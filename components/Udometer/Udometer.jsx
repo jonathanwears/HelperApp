@@ -4,7 +4,7 @@ import KmInput from './KmInput';
 import TitleCounter from '../Counter/TitleCounter';
 import CounterStyle from '../../utils/Styles/CounterStyle';
 
-function Udometer({name, updateKm, km}) {
+function Udometer({ name, updateKm, km }) {
   
   return (
     <View style={CounterStyle.container}>

@@ -2,6 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import useKilometers from '../../utils/customHooks/useKilometers';
 import BasicAreaStyle from '../../utils/Styles/BasicAreaStyle';
+import KmDifferenceStatus from './KmDifferenceStatus';
 import Udometer from './Udometer';
 
 function UdometerArea() {
@@ -21,6 +22,7 @@ function UdometerArea() {
   return (
     <View style={BasicAreaStyle.container}>
       <Udometer name='startKm' updateKm={updateKm} km={startKm}/> 
+      <KmDifferenceStatus start={startKm} finish={finishKm} />
       <Udometer name='finishKm' updateKm={updateKm} km={finishKm} />
     </View>
   );
