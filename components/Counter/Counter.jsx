@@ -4,6 +4,8 @@ import { saveData, getData } from '../../utils/index';
 import TitleCounter from "./TitleCounter";
 import CustomButton from "../Buttons/CustomButton";
 import  CounterTextStyle  from "../../utils/Styles/CounterTextStyle";
+import CounterStyle from "../../utils/Styles/CounterStyle";
+
 
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
@@ -51,7 +53,7 @@ function Counter({ entry }) {
   }
   
   return (
-    <View style={styles.container}>
+    <View style={CounterStyle.container}>
       <TitleCounter entry={entry} />
       <CustomButton name={'Up'} onPress={() => increment('+')} />
       <Text style={CounterTextStyle.text}>{totalNum}</Text>
@@ -59,17 +61,5 @@ function Counter({ entry }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    backgroundColor: '#b8cfec',
-    borderRadius: 5,
-    width: 125,
-    margin: 2,
-    paddingTop: 0,
-    paddingBottom: 10,
-  },
-});
 
 export default Counter;
