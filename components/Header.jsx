@@ -14,8 +14,8 @@ function Header() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'violet',
-    height: 300,
+    backgroundColor: 'black',
+    height: 170,
     padding: 35,
     paddingBottom: 25,
     borderBottomLeftRadius: 5,

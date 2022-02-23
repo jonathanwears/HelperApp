@@ -12,7 +12,6 @@ const BasicAreaStyle = StyleSheet.create({
     padding: 10,
     margin: 2,
   },
-
 });
 
 export default BasicAreaStyle;
