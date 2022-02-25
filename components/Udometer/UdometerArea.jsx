@@ -16,10 +16,10 @@ function UdometerArea() {
 
   function updateKm(event, newNumber) {
     if (newNumber === NaN) return;
-    if (event === 'startKm') {
+    if (event === UDO_COUNTER_NAME_1) {
       setStartKm(newNumber);
     }
-    else if (event === 'finishKm') {
+    else if (event === UDO_COUNTER_NAME_2) {
       setFinishKm(newNumber);
     }
   }
@@ -27,7 +27,7 @@ function UdometerArea() {
   return (
     <View style={styles.container}>
       <View>
-        <Title name={UDO_NAME}/>
+        <Title name={UDO_NAME} />
       </View>
       <View style={BasicAreaStyle.container}>
         <Udometer name={UDO_COUNTER_NAME_1} updateKm={updateKm} km={startKm} />
@@ -39,12 +39,13 @@ function UdometerArea() {
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
-    flexDirection :'column',
+    flexDirection: 'column',
     backgroundColor: '#262626',
-    marginTop:10,
+    marginTop: 10,
     borderRadius: 10,
   }
 })
+
 export default UdometerArea;

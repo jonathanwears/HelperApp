@@ -6,6 +6,7 @@ import CounterStyle from '../../utils/Styles/CounterStyle';
 
 function Udometer({ name, updateKm, km }) {
   
+
   return (
     <View style={CounterStyle.container}>
       <TitleCounter entry={name}/>
