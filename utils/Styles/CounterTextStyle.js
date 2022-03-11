@@ -8,5 +8,4 @@ const CounterTextStyle = StyleSheet.create({
   }
 })
 
-
 export default CounterTextStyle;
