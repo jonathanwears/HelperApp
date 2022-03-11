@@ -5,7 +5,7 @@ import TitleCounter from "./TitleCounter";
 import CustomButton from "../Buttons/CustomButton";
 import  CounterTextStyle  from "../../utils/Styles/CounterTextStyle";
 import CounterStyle from "../../utils/Styles/CounterStyle";
-
+import { useAppStore } from '../../utils/appStore';
 
 function Counter({ entry }) {
   const isInitalMount = useRef(true);
@@ -32,7 +32,6 @@ function Counter({ entry }) {
       setTimeout(saveNewValue, 1000);
     }
   }, [totalNum])
-
 
   // increment Buttons sends a + or - to function. 
   function increment(event) {

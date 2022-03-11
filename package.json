@@ -22,7 +22,8 @@
     "react-native-immersive-bars": "^1.0.4",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "zustand": "^3.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
