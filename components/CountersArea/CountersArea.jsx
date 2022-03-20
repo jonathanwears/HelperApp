@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import 'react-native-get-random-values';
-import { v4 as uuid } from 'uuid';
 import Counter from './Counter/Counter';
-import ComponentNames from '../utils/json/ComponentNames.json';
-import BasicAreaStyle from '../utils/Styles/BasicAreaStyle';
-import Title from '../utils/Styles/Title';
+import { counterNames } from '../../utils/appStore';
+import BasicAreaStyle from '../../utils/Styles/BasicAreaStyle';
+import Title from '../../utils/Styles/Title';
 
 function CountersArea() {
   const COUNTER_NAME = 'Counters';
@@ -16,9 +15,9 @@ function CountersArea() {
         <Title name={COUNTER_NAME} />
       </View>
       <View style={BasicAreaStyle.container}>
-        {ComponentNames.counterNames.map(entry => {
+        {counterNames.map(counterName => {
           return (
-            <Counter key={uuid()} entry={entry} />
+            <Counter key={counterName} counterName={counterName} />
           )
         })}
       </View>
