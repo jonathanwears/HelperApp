@@ -6,24 +6,24 @@ import MinusDownCounterIcon from '../../utils/Styles/MinusDownCounterIcon';
 function CustomButton({ name, onPress }) {
 
   return (
-      <Pressable onPress={onPress}
+    <Pressable onPress={onPress}
       style={({ pressed }) => [
-          {
-            backgroundColor: pressed
-              ? '#d2e6ff'
-              : '#82b1ed',
-          },
-          styles.wrapper]}>
-        <Text style={styles.text}>
-        {(name === 'Up' ) ? <PlusUpCounterIcon /> : <MinusDownCounterIcon />}
+        {
+          backgroundColor: pressed
+            ? '#d2e6ff'
+            : '#82b1ed',
+        },
+        styles.wrapper]}>
+      <Text style={styles.text}>
+        {(name === 'Up') ? <PlusUpCounterIcon /> : <MinusDownCounterIcon />}
       </Text>
-      </Pressable>
+    </Pressable>
   )
 }
 
 const styles = StyleSheet.create({
   wrapper: {
-    borderRadius:5,
+    borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 0,

@@ -6,13 +6,13 @@ import CounterStyle from "../../../utils/Styles/CounterStyle";
 import { useCountersStore } from '../../../utils/appStore';
 
 function Counter({ counterName }) {
-
+  console.log(counterName)
   const counter = useCountersStore(state => state.counters[counterName])
   const updateCounter = useCountersStore(state => state.updateCounter)
-
+ 
   return (
     <View style={CounterStyle.container}>
-      <TitleCounter counterName={counterName} />
+      <TitleCounter title={counterName} />
       <CustomButton name={'Up'} onPress={() => updateCounter(counterName, counter + 1)} />
       <Text style={CounterTextStyle.text}>{counter}</Text>
       <CustomButton name={'Down'} onPress={() => updateCounter(counterName, Math.max(0, counter - 1))} />

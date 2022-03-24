@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
-function TitleCounter({ entry }) {
+function TitleCounter({ title }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{entry}</Text>
+      <Text style={styles.text}>{title}</Text>
     </View>
   )
 }
