@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
+import ResetZeroCounters from './CountersArea/ResetZeroCounters';
 
 function Header() {
 
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Helper App</Text>
+      <ResetZeroCounters />
       </View>
   );
 };

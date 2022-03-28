@@ -12,7 +12,7 @@ function Counter({ counterName }) {
 
   return (
     <View style={CounterStyle.container}>
-      <TitleCounter counterName={counterName} />
+      <TitleCounter entry={counterName} />
       <CustomButton name={'Up'} onPress={() => updateCounter(counterName, counter + 1)} />
       <Text style={CounterTextStyle.text}>{counter}</Text>
       <CustomButton name={'Down'} onPress={() => updateCounter(counterName, Math.max(0, counter - 1))} />
