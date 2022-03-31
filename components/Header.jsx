@@ -1,14 +1,21 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import ResetZeroCounters from './CountersArea/ResetZeroCounters';
+import { useCountersStore } from '../utils/appStore';
 
 function Header() {
+  const updateCounter = useCountersStore(state => state.updateCounter);
+  const counters = useCountersStore((state) => state.counters);
 
+  function reset() {
+    ResetZeroCounters(counters, updateCounter)
+  }
+  
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Helper App</Text>
-      <ResetZeroCounters />
-      </View>
+      <Button title="hello" onPress={reset}></Button>
+    </View >
   );
 };
 

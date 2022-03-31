@@ -1,20 +1,7 @@
-import React from 'react';
-import { Button } from 'react-native';
-import { useCountersStore } from '../../utils/appStore';
-
-function ResetZeroCounters() {
-
-  const updateCounter = useCountersStore(state => state.updateCounter)
-  const counters = useCountersStore((state) => state.counters);
-
-  function reset() {
-    const countersArr = Object.keys(counters);
-    countersArr.forEach(counter => {
-      updateCounter(counter, 0)
-    });
-  }
-
-  return <Button title='clear' onPress={reset}></Button>
+export default function ResetZeroCounters(state, updateState) {
+  // will accept the state and the updater function.
+  const countersArr = Object.keys(state);
+  countersArr.forEach(counter => {
+    updateState(counter, 0)
+  });
 }
-
-export default ResetZeroCounters;

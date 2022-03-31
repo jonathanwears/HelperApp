@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 
-function Hotbar() {
+function Hotbar({ drawer }) {
+
 
   return (
     <View style={styles.container}>
-
+      <Button title='hello' onPress={() => drawer.current.openDrawer()}></Button>
     </View>
   );  
 }
@@ -13,10 +14,13 @@ function Hotbar() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'yellow',
-    height: 50,
+    flexGrow: 1,
+    backgroundColor: 'black',
+    height: '10%',
+    width: '100%',
     bottom: 0,
     position: 'absolute',
+    opacity: .9,
   },
 });
 
