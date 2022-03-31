@@ -3,12 +3,11 @@ import { StyleSheet, View, Button } from 'react-native';
 
 function Hotbar({ drawer }) {
 
-
   return (
     <View style={styles.container}>
       <Button title='hello' onPress={() => drawer.current.openDrawer()}></Button>
     </View>
-  );  
+  );
 }
 
 const styles = StyleSheet.create({
