@@ -18,7 +18,7 @@ export default function App() {
   }, [])
 
   const DrawerLayoutAndroidProps = {
-    drawerBackgroundColor: '#262626',
+    drawerBackgroundColor: '#151515',
     drawerWidth: 200
   }
 
