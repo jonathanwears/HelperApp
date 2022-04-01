@@ -1,9 +1,11 @@
 import { View, Text } from 'react-native';
+import { increment, decrement } from '../../../utils/MathsOperations';
 import TitleCounter from "./TitleCounter";
 import CustomButton from '../../Buttons/CustomButton';
+import { useCountersStore } from '../../../utils/appStore';
+// styles
 import CounterTextStyle from "../../../utils/Styles/CounterTextStyle";
 import CounterStyle from "../../../utils/Styles/CounterStyle";
-import { useCountersStore } from '../../../utils/appStore';
 
 function Counter({ counterName }) {
   console.log(counterName)
@@ -12,10 +14,10 @@ function Counter({ counterName }) {
  
   return (
     <View style={CounterStyle.container}>
-      <TitleCounter title={counterName} />
-      <CustomButton name={'Up'} onPress={() => updateCounter(counterName, counter + 1)} />
+      <TitleCounter entry={counterName} />
+      <CustomButton name={'Up'} onPress={() => updateCounter(counterName, increment(counter))} />
       <Text style={CounterTextStyle.text}>{counter}</Text>
-      <CustomButton name={'Down'} onPress={() => updateCounter(counterName, Math.max(0, counter - 1))} />
+      <CustomButton name={'Down'} onPress={() => updateCounter(counterName, decrement(counter))} />
     </View>
   );
 }

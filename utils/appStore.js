@@ -10,7 +10,7 @@ export const counterNames = [
 ]
 function getInitialValues() {
   const [redeployed, collected, deployed, cantFind, cantReach] = counterNames;
-  
+
   return {
     counters: {
       [redeployed]: 0,

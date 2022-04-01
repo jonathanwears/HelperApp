@@ -3,10 +3,10 @@ import { Pressable, Text, StyleSheet } from 'react-native';
 import PlusUpCounterIcon from '../../utils/Styles/PlusUpCounterIcon';
 import MinusDownCounterIcon from '../../utils/Styles/MinusDownCounterIcon';
 
-function CustomButton({ name, onPress }) {
+function CustomButton({ name, press }) {
 
   return (
-    <Pressable onPress={onPress}
+    <Pressable onPress={press}
       style={({ pressed }) => [
         {
           backgroundColor: pressed
@@ -14,8 +14,10 @@ function CustomButton({ name, onPress }) {
             : '#82b1ed',
         },
         styles.wrapper]}>
-      <Text style={styles.text}>
-        {(name === 'Up') ? <PlusUpCounterIcon /> : <MinusDownCounterIcon />}
+      <Text>
+        {name === 'Up' && <PlusUpCounterIcon />}
+        {name === 'Down' && <MinusDownCounterIcon />}
+        {name != 'Up' && name != 'Down' && `${name}`}
       </Text>
     </Pressable>
   )
@@ -31,10 +33,6 @@ const styles = StyleSheet.create({
     height: 50,
     width: 100,
   },
-  text: {
-    height: 10,
-    width: 10,
-  }
 });
 
 export default CustomButton;

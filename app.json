@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "Helper App",
+    "name": "Count",
     "slug": "Helper-App",
     "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash1.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#262626"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,8 +21,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#111"
+        "foregroundImage": "./assets/adaptive-icon1.png",
+        "backgroundColor": "#262626"
       },
       "package": "Helper.apk"
     },

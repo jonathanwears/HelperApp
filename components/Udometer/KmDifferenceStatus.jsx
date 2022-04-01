@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { minus } from '../../utils/MathsOperations';
 import { Text, View, StyleSheet } from 'react-native';
 import CounterTextStyle from '../../utils/Styles/CounterTextStyle';
-import CounterStyle from '../../utils/Styles/CounterStyle';
 
 function KmDifferenceStatus({ start, finish }) {
   const [difference, setDifference] = useState(0);
 
   useEffect(() => {
-    const kmDiffernece = finish - start;
+    const kmDiffernece = minus(finish, start);
     setDifference(kmDiffernece);
   }, [start, finish]);
 

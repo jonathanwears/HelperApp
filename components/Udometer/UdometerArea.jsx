@@ -10,16 +10,18 @@ function UdometerArea() {
   const [startKm, setStartKm] = useKilometers('startKm');
   const [finishKm, setFinishKm] = useKilometers('finishKm');
 
-  const UDO_COUNTER_NAME_1 = 'Start';
-  const UDO_COUNTER_NAME_2 = 'Finish';
-  const UDO_NAME = 'Kilometres';
+  const UDO_NAMES = {
+    start :'Start' ,
+    finish :'Finish',
+    name: 'Kilometres'
+  }
 
   function updateKm(event, newNumber) {
     if (newNumber === NaN) return;
-    if (event === UDO_COUNTER_NAME_1) {
+    if (event === UDO_NAMES.start) {
       setStartKm(newNumber);
     }
-    else if (event === UDO_COUNTER_NAME_2) {
+    else if (event === UDO_NAMES.finish) {
       setFinishKm(newNumber);
     }
   }
@@ -27,12 +29,24 @@ function UdometerArea() {
   return (
     <View style={styles.container}>
       <View>
-        <Title name={UDO_NAME} />
+        <Title name={UDO_NAMES.name} />
       </View>
       <View style={BasicAreaStyle.container}>
-        <Udometer name={UDO_COUNTER_NAME_1} updateKm={updateKm} km={startKm} />
-        <KmDifferenceStatus start={startKm} finish={finishKm} />
-        <Udometer name={UDO_COUNTER_NAME_2} updateKm={updateKm} km={finishKm} />
+
+        <Udometer
+          name={UDO_NAMES.start}
+          updateKm={updateKm}
+          km={startKm} />
+
+        <KmDifferenceStatus
+          start={startKm}
+          finish={finishKm} />
+
+        <Udometer
+          name={UDO_NAMES.finish}
+          updateKm={updateKm}
+          km={finishKm} />
+
       </View>
     </View>
   );
