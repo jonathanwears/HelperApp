@@ -14,9 +14,9 @@ function Counter({ counterName }) {
   return (
     <View style={CounterStyle.container}>
       <TitleCounter name={counterName} />
-      <CustomButton name={'Up'} onPress={() => updateCounter(counterName, increment(counter))} />
+      <CustomButton name={'Up'} press={() => updateCounter(counterName, increment(counter))} />
       <Text style={CounterTextStyle.text}>{counter}</Text>
-      <CustomButton name={'Down'} onPress={() => updateCounter(counterName, decrement(counter))} />
+      <CustomButton name={'Down'} press={() => updateCounter(counterName, decrement(counter))} />
     </View>
   );
 }
