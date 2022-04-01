@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import { useCountersStore } from '../../utils/appStore';
 //components
 import ResetZeroCounters from '../CountersArea/ResetZeroCounters';
-import CustomButton from '../Buttons/CustomButton';
+import CounterButton from '../Buttons/CounterButton';
 
 function Drawer() {
 
@@ -16,7 +16,7 @@ function Drawer() {
 
   return (
     <View>
-     <CustomButton name="biscuits" press={"w"} />      
+     <CounterButton name="biscuits" press={"w"} />      
      <Text name="hello" onPress={reset}>hello</Text>
     </View>
   )

@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 
-
 const BasicAreaStyle = StyleSheet.create({
   container: {
     flex: 1,
