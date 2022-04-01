@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import MinusDownCounterIcon from '../utils/Styles/MinusDownCounterIcon';
 
 function Header() {
-
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Helper App</Text>
+      <Text style={styles.text}>Count</Text>
+      <MinusDownCounterIcon />
     </View>
   );
 };

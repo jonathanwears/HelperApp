@@ -12,7 +12,7 @@ function Hotbar({ drawer }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 3,
     flexGrow: 1,
     backgroundColor: 'black',
     height: '10%',
