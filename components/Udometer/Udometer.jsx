@@ -8,7 +8,7 @@ function Udometer({ name, updateKm, km }) {
   
   return (
     <View style={CounterStyle.container}>
-      <TitleCounter title={name}/>
+      <TitleCounter name={name}/>
       <KmInput name={name} updateKm={updateKm} km={km} />
     </View>
   );
