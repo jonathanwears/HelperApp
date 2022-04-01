@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, View, Button } from 'react-native';
-
+import CustomButton from '../Buttons/CustomButton';
 function Hotbar({ drawer }) {
 
+  const press = () => drawer.current.openDrawer();
   return (
     <View style={styles.container}>
-      <Button title='hello' onPress={() => drawer.current.openDrawer()}></Button>
+    <CustomButton name='Open Options' press={press} />
     </View>
   );
 }

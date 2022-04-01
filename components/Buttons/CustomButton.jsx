@@ -4,7 +4,7 @@ import PlusUpCounterIcon from '../../utils/Styles/PlusUpCounterIcon';
 import MinusDownCounterIcon from '../../utils/Styles/MinusDownCounterIcon';
 
 function CustomButton({ name, press }) {
-
+// accepts a button name and the onpress function
   return (
     <Pressable onPress={press}
       style={({ pressed }) => [
