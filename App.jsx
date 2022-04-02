@@ -11,7 +11,7 @@ import { useEffect, useRef } from 'react';
 import { useCountersStore } from './utils/appStore';
 // components
 import Header from './components/Header';
-import CountersArea from './components/CountersArea/CountersArea'
+import CountersArea from './components/CountersArea/CountersArea';
 import UdometerArea from './components/Udometer/UdometerArea';
 import Hotbar from './components/Hotbar/Hotbar';
 import Drawer from './components/Drawer/Drawer';
