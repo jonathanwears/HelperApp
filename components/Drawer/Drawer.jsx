@@ -15,7 +15,7 @@ function Drawer() {
 
   return (
     <View>
-      <CounterButton name="biscuits" press={reset} />
+      <CounterButton name="Clear Counters" press={reset} />
     </View>
   );
 }
