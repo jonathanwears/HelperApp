@@ -1,13 +1,7 @@
+/* eslint-disable import/prefer-default-export */
 import create from 'zustand';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
-export const counterNames = [
-  'Redeployed',
-  'Collected',
-  'Deployed',
-  'Can\'t find',
-  'Can\'t reach',
-];
+import counterNames from './CountersList';
 
 function getInitialValues() {
   const [redeployed, collected, deployed, cantFind, cantReach] = counterNames;
