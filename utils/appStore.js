@@ -4,17 +4,20 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import counterNames from './CountersList';
 
 function getInitialValues() {
-  const [redeployed, collected, deployed, cantFind, cantReach] = counterNames;
+  const countersObj = counterNames.reduce((prevValue, currentValue) => {
+    const obj = {
+      ...prevValue,
+      [currentValue]: 0,
+    };
+    return obj;
+  }, 0);
 
-  return {
+  const counters = {
     counters: {
-      [redeployed]: 0,
-      [collected]: 0,
-      [deployed]: 0,
-      [cantFind]: 0,
-      [cantReach]: 0,
+      ...countersObj,
     },
   };
+  return counters;
 }
 
 export const useCountersStore = create((set) => ({
