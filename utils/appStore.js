@@ -2,12 +2,13 @@ import create from 'zustand';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const counterNames = [
-  "Redeployed",
-  "Collected",
-  "Deployed",
-  "Can't find",
-  "Cant reach"
-]
+  'Redeployed',
+  'Collected',
+  'Deployed',
+  'Can\'t find',
+  'Can\'t reach',
+];
+
 function getInitialValues() {
   const [redeployed, collected, deployed, cantFind, cantReach] = counterNames;
 
@@ -18,11 +19,11 @@ function getInitialValues() {
       [deployed]: 0,
       [cantFind]: 0,
       [cantReach]: 0,
-    }
-  }
+    },
+  };
 }
 
-export const useCountersStore = create(set => ({
+export const useCountersStore = create((set) => ({
   ...getInitialValues(),
 
   syncCounters: async () => {
@@ -41,18 +42,17 @@ export const useCountersStore = create(set => ({
         [deployed]: Number(deployedData),
         [cantFind]: Number(cantFindData),
         [cantReach]: Number(cantReachData),
-      }
-    })
+      },
+    });
   },
 
   updateCounter: (name, value) => {
-    AsyncStorage.setItem(name, value.toString())
-
+    AsyncStorage.setItem(name, value.toString());
     set(({ counters }) => ({
       counters: {
         ...counters,
         [name]: value,
-      }
-    }))
+      },
+    }));
   },
-}))
+}));

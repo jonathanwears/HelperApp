@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import useKilometers from '../../utils/customHooks/useKilometers';
 import BasicAreaStyle from '../../utils/Styles/BasicAreaStyle';
@@ -11,17 +10,16 @@ function UdometerArea() {
   const [finishKm, setFinishKm] = useKilometers('finishKm');
 
   const UDO_NAMES = {
-    start :'Start' ,
-    finish :'Finish',
-    name: 'Kilometres'
-  }
+    start: 'Start',
+    finish: 'Finish',
+    name: 'Kilometres',
+  };
 
   function updateKm(event, newNumber) {
-    if (newNumber === NaN) return;
+    if (newNumber.isNaN) return;
     if (event === UDO_NAMES.start) {
       setStartKm(newNumber);
-    }
-    else if (event === UDO_NAMES.finish) {
+    } else if (event === UDO_NAMES.finish) {
       setFinishKm(newNumber);
     }
   }
@@ -36,16 +34,19 @@ function UdometerArea() {
         <Udometer
           name={UDO_NAMES.start}
           updateKm={updateKm}
-          km={startKm} />
+          km={startKm}
+        />
 
         <KmDifferenceStatus
           start={startKm}
-          finish={finishKm} />
+          finish={finishKm}
+        />
 
         <Udometer
           name={UDO_NAMES.finish}
           updateKm={updateKm}
-          km={finishKm} />
+          km={finishKm}
+        />
 
       </View>
     </View>
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#262626',
     marginTop: 10,
     borderRadius: 10,
-  }
-})
+  },
+});
 
 export default UdometerArea;

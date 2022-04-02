@@ -1,12 +1,11 @@
-import React from 'react';
-import { StyleSheet, View, Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import CounterButton from '../Buttons/CounterButton';
-function Hotbar({ drawer }) {
 
+function Hotbar({ drawer }) {
   const press = () => drawer.current.openDrawer();
   return (
     <View style={styles.container}>
-    <CounterButton name='Open Options' press={press} />
+      <CounterButton name="Open Options" press={press} />
     </View>
   );
 }
@@ -22,7 +21,7 @@ const styles = StyleSheet.create({
     width: '100%',
     bottom: 0,
     position: 'absolute',
-    opacity: .9,
+    opacity: 0.9,
   },
 });
 

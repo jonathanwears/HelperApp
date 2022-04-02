@@ -3,7 +3,7 @@ export function increment(value) {
 }
 
 export function decrement(value) {
-  return Math.max(0, value - 1)
+  return Math.max(0, value - 1);
 }
 
 export function minus(value1, value2) {

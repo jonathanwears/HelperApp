@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Counter from './Counter/Counter';
 import { counterNames } from '../../utils/appStore';
@@ -9,13 +8,8 @@ function CountersArea() {
   const COUNTER_NAME = 'Counters';
 
   function counter() {
-    return (
-      counterNames.map(counterName => {
-        return (
-          <Counter key={counterName} counterName={counterName} />
-        )
-      })
-    )
+    // eslint-disable-next-line max-len
+    return counterNames.map((counterName) => <Counter key={counterName} counterName={counterName} />);
   }
 
   return (
@@ -28,7 +22,7 @@ function CountersArea() {
       </View>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -38,7 +32,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderRadius: 10,
     marginBottom: 80,
-  }
-})
+  },
+});
 
 export default CountersArea;

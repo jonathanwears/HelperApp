@@ -1,25 +1,24 @@
-import React from 'react';
+/* eslint-disable react/jsx-no-bind */
 import { View, Text } from 'react-native';
 import { useCountersStore } from '../../utils/appStore';
-//components
+// components
 import ResetZeroCounters from '../CountersArea/ResetZeroCounters';
 import CounterButton from '../Buttons/CounterButton';
 
 function Drawer() {
-
-  const updateCounter = useCountersStore(state => state.updateCounter);
+  const updateCounter = useCountersStore((state) => state.updateCounter);
   const counters = useCountersStore((state) => state.counters);
 
   function reset() {
-    ResetZeroCounters(counters, updateCounter)
+    ResetZeroCounters(counters, updateCounter);
   }
 
   return (
     <View>
-     <CounterButton name="biscuits" press={"w"} />      
-     <Text name="hello" onPress={reset}>hello</Text>
+      <CounterButton name="biscuits" press="w" />
+      <Text name="hello" onPress={reset}>hello</Text>
     </View>
-  )
+  );
 }
 
 export default Drawer;

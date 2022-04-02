@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import MinusDownCounterIcon from '../utils/Styles/MinusDownCounterIcon';
 
@@ -9,7 +8,7 @@ function Header() {
       <MinusDownCounterIcon />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontSize: 25,
-  }
+  },
 });
 
 export default Header;

@@ -1,11 +1,11 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 const CounterTextStyle = StyleSheet.create({
   text: {
     textAlign: 'center',
     fontSize: 30,
-    color:'white',
-  }
-})
+    color: 'white',
+  },
+});
 
 export default CounterTextStyle;

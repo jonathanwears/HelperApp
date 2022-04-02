@@ -1,4 +1,3 @@
-import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 import minus from '../../assets/icons/minus.png';
 
@@ -13,7 +12,7 @@ const styles = StyleSheet.create({
     height: 10,
     width: 10,
     padding: 5,
-  }
+  },
 });
 
 export default MinusDownCounterIcon;

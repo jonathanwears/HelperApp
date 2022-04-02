@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export const CounterButtonStyle = StyleSheet.create({
   container: {
@@ -15,4 +15,4 @@ export const CounterButtonStyle = StyleSheet.create({
 export const ButtonColors = {
   pressed: '#d2e6ff',
   released: '#82b1ed',
-}
+};

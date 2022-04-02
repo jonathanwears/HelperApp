@@ -1,13 +1,11 @@
-import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
 function TitleCounter({ name }) {
-  
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{name}</Text>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -25,7 +23,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     paddingBottom: 10,
-  }
-})
+  },
+});
 
 export default TitleCounter;
