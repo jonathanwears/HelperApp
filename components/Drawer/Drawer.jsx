@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-bind */
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { useCountersStore } from '../../utils/appStore';
 // components
 import ResetZeroCounters from '../CountersArea/ResetZeroCounters';
@@ -14,10 +14,18 @@ function Drawer() {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       <CounterButton name="biscuits" press={reset} />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default Drawer;
