@@ -7,5 +7,5 @@ export function decrement(value) {
 }
 
 export function minus(value1, value2) {
-  return value2 - value1;
+  return value1 - value2;
 }
