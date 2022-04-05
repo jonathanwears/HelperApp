@@ -26,26 +26,11 @@ export const useCountersStore = create((set) => ({
   ...getInitialValues(),
 
   syncCounters: async () => {
-    // const [redeployed, collected, deployed, cantFind, cantReach] = counterNames;
+    const syncedCounters = await SyncCounters(getInitialValues);
 
-    // const redeployedData = await AsyncStorage.getItem(redeployed);
-    // const collectedData = await AsyncStorage.getItem(collected);
-    // const deployedData = await AsyncStorage.getItem(deployed);
-    // const cantFindData = await AsyncStorage.getItem(cantFind);
-    // const cantReachData = await AsyncStorage.getItem(cantReach);
-
-    // set({
-    //   counters: {
-    //     [redeployed]: Number(redeployedData),
-    //     [collected]: Number(collectedData),
-    //     [deployed]: Number(deployedData),
-    //     [cantFind]: Number(cantFindData),
-    //     [cantReach]: Number(cantReachData),
-    //   },
-    // });
     set({
       counters: {
-        ...SyncCounters(getInitialValues),
+        ...syncedCounters,
       },
     });
   },
@@ -60,3 +45,20 @@ export const useCountersStore = create((set) => ({
     }));
   },
 }));
+
+// const [redeployed, collected, deployed, cantFind, cantReach] = counterNames;
+// const redeployedData = await AsyncStorage.getItem(redeployed);
+// const collectedData = await AsyncStorage.getItem(collected);
+// const deployedData = await AsyncStorage.getItem(deployed);
+// const cantFindData = await AsyncStorage.getItem(cantFind);
+// const cantReachData = await AsyncStorage.getItem(cantReach);
+
+// set({
+//   counters: {
+//     [redeployed]: Number(redeployedData),
+//     [collected]: Number(collectedData),
+//     [deployed]: Number(deployedData),
+//     [cantFind]: Number(cantFindData),
+//     [cantReach]: Number(cantReachData),
+//   },
+// });

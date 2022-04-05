@@ -15,7 +15,7 @@ function Counter({ counterName }) {
     <View style={CounterStyle.container}>
       <TitleCounter name={counterName} />
       <CounterButton name="Up" press={() => updateCounter(counterName, increment(counter))} />
-      <Text style={CounterTextStyle.text}>{counter}</Text>
+      <Text style={CounterTextStyle.text}>{counter || 0}</Text>
       <CounterButton name="Down" press={() => updateCounter(counterName, decrement(counter))} />
     </View>
   );
