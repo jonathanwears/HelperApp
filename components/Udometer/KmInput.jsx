@@ -13,7 +13,7 @@ function KmInput({ name, updateKm, km }) {
       keyboardType="number-pad"
       name={name}
     >
-      {km}
+      {km || 0}
     </TextInput>
   );
 }

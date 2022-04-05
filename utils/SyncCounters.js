@@ -3,7 +3,7 @@
 /* eslint-disable no-await-in-loop */
 /* eslint-disable no-restricted-syntax */
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import ComponentNames from './json/ComponentNames.json';
+import counterNames from './CountersList';
 
 async function syncCounters(counter) {
   const data = await AsyncStorage.getItem(counter);
@@ -23,7 +23,7 @@ function setCounters(counts) {
 
 async function getCounters() {
   const counters = [];
-  for (const counter of ComponentNames) {
+  for (const counter of counterNames) {
     await syncCounters(counter).then((value) => {
       counters.push([counter, value]);
     });
@@ -32,7 +32,7 @@ async function getCounters() {
 }
 
 async function SyncCounters() {
-  const createCounters = await getCounters(ComponentNames);
+  const createCounters = await getCounters(counterNames);
   const a = await setCounters(createCounters);
   return a;
 }

@@ -1,6 +1,6 @@
 import { View, StyleSheet } from 'react-native';
 import Counter from './Counter/Counter';
-import { counterNames } from '../../utils/appStore';
+import counterNames from '../../utils/CountersList';
 import BasicAreaStyle from '../../utils/Styles/BasicAreaStyle';
 import Title from '../../utils/Styles/Title';
 
