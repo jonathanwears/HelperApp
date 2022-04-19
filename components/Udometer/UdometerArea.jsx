@@ -4,10 +4,17 @@ import BasicAreaStyle from '../../utils/Styles/BasicAreaStyle';
 import Title from '../../utils/Styles/Title';
 import KmDifferenceStatus from './KmDifferenceStatus';
 import Udometer from './Udometer';
+import CounterButton from '../Buttons/CounterButton';
 
 function UdometerArea() {
   const [startKm, setStartKm] = useKilometers('startKm');
   const [finishKm, setFinishKm] = useKilometers('finishKm');
+
+  function newDayKmValues() {
+    if (finishKm === 0) return;
+    setStartKm(finishKm);
+    setFinishKm(0);
+  }
 
   const UDO_NAMES = {
     start: 'Start',
@@ -47,7 +54,7 @@ function UdometerArea() {
           updateKm={updateKm}
           km={finishKm}
         />
-
+        <CounterButton name="Set new Day Values" press={newDayKmValues} />
       </View>
     </View>
   );
