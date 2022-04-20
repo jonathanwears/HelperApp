@@ -2,8 +2,8 @@
 /* eslint-disable import/prefer-default-export */
 import create from 'zustand';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import SyncCounters from './SyncCounters';
-import counterNames from './CountersList';
+import SyncCounters from '../SyncCounters';
+import counterNames from '../CountersList';
 
 function getInitialValues() {
   const countersObj = counterNames.reduce((prevValue, currentValue) => {

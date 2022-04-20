@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-bind */
 import { View } from 'react-native';
-import { useCountersStore } from '../../utils/appStore';
+import { useCountersStore } from '../../utils/stores/appStore';
 // components
 import ResetZeroCounters from '../CountersArea/ResetZeroCounters';
 import CounterButton from '../Buttons/CounterButton';

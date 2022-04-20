@@ -8,7 +8,7 @@ import {
   DrawerLayoutAndroid,
 } from 'react-native';
 import { useEffect, useRef } from 'react';
-import { useCountersStore } from './utils/appStore';
+import { useCountersStore } from './utils/stores/appStore';
 // components
 import Header from './components/Header';
 import CountersArea from './components/CountersArea/CountersArea';

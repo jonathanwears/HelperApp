@@ -2,7 +2,7 @@ import { View, Text } from 'react-native';
 import { increment, decrement } from '../../../utils/MathsOperations';
 import TitleCounter from './TitleCounter';
 import CounterButton from '../../Buttons/CounterButton';
-import { useCountersStore } from '../../../utils/appStore';
+import { useCountersStore } from '../../../utils/stores/appStore';
 // styles
 import CounterTextStyle from '../../../utils/Styles/CounterTextStyle';
 import CounterStyle from '../../../utils/Styles/CounterStyle';
