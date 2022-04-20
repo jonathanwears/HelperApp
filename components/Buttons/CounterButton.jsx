@@ -5,6 +5,14 @@ import MinusDownCounterIcon from '../../utils/Styles/MinusDownCounterIcon';
 
 function CustomButton({ name, press }) {
   // accepts a button name and the onpress function
+  function nameValue() {
+    switch (name) {
+      case 'Up': return <PlusUpCounterIcon />;
+      case 'Down': return <MinusDownCounterIcon />;
+      default: return name;
+    }
+  }
+
   return (
     <Pressable
       onPress={press}
@@ -16,9 +24,7 @@ function CustomButton({ name, press }) {
       ]}
     >
       <Text>
-        {name === 'Up' && <PlusUpCounterIcon />}
-        {name === 'Down' && <MinusDownCounterIcon />}
-        {name !== 'Up' && name !== 'Down' && `${name}`}
+        {nameValue()}
       </Text>
     </Pressable>
   );
