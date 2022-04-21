@@ -16,6 +16,7 @@ function CustomButton({ name, press }) {
   return (
     <Pressable
       onPress={press}
+      hitSlop={10}
       style={({ pressed }) => [
         {
           backgroundColor: pressed ? '#d2e6ff' : '#82b1ed',
