@@ -18,6 +18,8 @@ function UdometerArea() {
 
   const UDO_NAMES = {
     start: 'Start',
+    syncStartName: 'startKm',
+    syncFinishName: 'finishKm',
     finish: 'Finish',
     name: 'Kilometres',
   };
@@ -40,6 +42,7 @@ function UdometerArea() {
 
         <Udometer
           name={UDO_NAMES.start}
+          syncName={UDO_NAMES.syncStartName}
           updateKm={updateKm}
           km={startKm}
         />
@@ -51,6 +54,7 @@ function UdometerArea() {
 
         <Udometer
           name={UDO_NAMES.finish}
+          syncName={UDO_NAMES.syncFinishName}
           updateKm={updateKm}
           km={finishKm}
         />

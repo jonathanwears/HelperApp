@@ -1,5 +1,5 @@
 const counterNames = [
-  'Redeployed',
+  'Rebalanced',
   'Collected',
   'Deployed',
   'Can\'t find',

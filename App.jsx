@@ -15,14 +15,16 @@ import CountersArea from './components/CountersArea/CountersArea';
 import UdometerArea from './components/Udometer/UdometerArea';
 import Hotbar from './components/Hotbar/Hotbar';
 import Drawer from './components/Drawer/Drawer';
+import useKmStore from './utils/stores/kmStore';
 
 export default function App() {
   const drawer = useRef(null);
 
   const syncCounters = useCountersStore((state) => state.syncCounters);
-
+  const syncKilometers = useKmStore((state) => state.syncKm);
   useEffect(() => {
     syncCounters();
+    syncKilometers();
   }, []);
 
   const DrawerLayoutAndroidProps = {
