@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import useKilometers from '../../utils/customHooks/useKilometers';
+import useKmStore from '../../utils/stores/kmStore';
 import BasicAreaStyle from '../../utils/Styles/BasicAreaStyle';
 import Title from '../../utils/Styles/Title';
 import KmDifferenceStatus from './KmDifferenceStatus';
@@ -7,13 +7,15 @@ import Udometer from './Udometer';
 import CounterButton from '../Buttons/CounterButton';
 
 function UdometerArea() {
-  const [startKm, setStartKm] = useKilometers('startKm');
-  const [finishKm, setFinishKm] = useKilometers('finishKm');
+  const startKm = useKmStore((state) => state.kilometers.startKm);
+  const finishKm = useKmStore((state) => state.kilometers.finishKm);
+  const updateFinishKm = useKmStore((state) => state.updateKm);
+  const updateStartKm = useKmStore((state) => state.updateKm);
 
-  function newDayKmValues() {
+  function swapKms() {
     if (finishKm === 0) return;
-    setStartKm(finishKm);
-    setFinishKm(0);
+    updateFinishKm('finishKm', startKm);
+    updateStartKm('startKm', finishKm);
   }
 
   const UDO_NAMES = {
@@ -23,15 +25,6 @@ function UdometerArea() {
     finish: 'Finish',
     name: 'Kilometres',
   };
-
-  function updateKm(event, newNumber) {
-    if (newNumber.isNaN) return;
-    if (event === UDO_NAMES.start) {
-      setStartKm(newNumber);
-    } else if (event === UDO_NAMES.finish) {
-      setFinishKm(newNumber);
-    }
-  }
 
   return (
     <View style={styles.container}>
@@ -43,22 +36,15 @@ function UdometerArea() {
         <Udometer
           name={UDO_NAMES.start}
           syncName={UDO_NAMES.syncStartName}
-          updateKm={updateKm}
-          km={startKm}
         />
 
-        <KmDifferenceStatus
-          start={startKm}
-          finish={finishKm}
-        />
+        <KmDifferenceStatus />
 
         <Udometer
           name={UDO_NAMES.finish}
           syncName={UDO_NAMES.syncFinishName}
-          updateKm={updateKm}
-          km={finishKm}
         />
-        <CounterButton name="Set new Day Values" press={newDayKmValues} />
+        <CounterButton name="Set new Day Values" press={swapKms} />
       </View>
     </View>
   );

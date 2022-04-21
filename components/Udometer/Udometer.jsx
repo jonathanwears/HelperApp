@@ -4,20 +4,14 @@ import TitleCounter from '../CountersArea/Counter/TitleCounter';
 import CounterStyle from '../../utils/Styles/CounterStyle';
 import useKmStore from '../../utils/stores/kmStore';
 
-function Udometer({
-  name,
-  syncName,
-  updateKm,
-  km,
-}) {
-  console.log(syncName);
-  const km1 = useKmStore((state) => state.kilometers[syncName]);
-  const updateKm1 = useKmStore((state) => state.updateKm);
-  console.log(updateKm1);
+function Udometer({ name, syncName }) {
+  const km = useKmStore((state) => state.kilometers[syncName]);
+  const updateKm = useKmStore((state) => state.updateKm);
+
   return (
     <View style={CounterStyle.container}>
       <TitleCounter name={name} />
-      <KmInput name={syncName} updateKm={updateKm1} km={km1} />
+      <KmInput name={syncName} updateKm={updateKm} km={km} />
     </View>
   );
 }

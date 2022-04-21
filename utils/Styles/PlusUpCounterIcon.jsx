@@ -1,4 +1,3 @@
-import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 import plus from '../../assets/icons/plus.png';
 
@@ -14,7 +13,7 @@ const styles = StyleSheet.create({
     width: 10,
     padding: 5,
     backgroundColor: 'blue',
-  }
+  },
 });
 
 export default PlusUpCounterIcon;

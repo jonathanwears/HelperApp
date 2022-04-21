@@ -11,7 +11,6 @@ function KmInput({ name, updateKm, km }) {
       style={CounterTextStyle.text}
       onChangeText={updateKmNum}
       keyboardType="number-pad"
-      name={name}
     >
       {km || 0}
     </TextInput>
