@@ -33,7 +33,7 @@ function CustomButton({ name, press }) {
 
 const styles = StyleSheet.create({
   wrapper: {
-    borderRadius: 5,
+    borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 0,

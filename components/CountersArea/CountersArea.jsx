@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: '#262626',
     marginTop: 10,
-    borderRadius: 10,
+    borderRadius: 20,
     marginBottom: 80,
   },
 });

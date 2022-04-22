@@ -4,7 +4,7 @@ const CounterStyle = StyleSheet.create({
   container: {
     alignItems: 'center',
     backgroundColor: '#b8cfec',
-    borderRadius: 10,
+    borderRadius: 20,
     width: 125,
     margin: 2,
     paddingTop: 0,
