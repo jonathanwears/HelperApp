@@ -1,5 +1,5 @@
-/* eslint-disable react/style-prop-object */
 /* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/style-prop-object */
 import {
   StyleSheet,
   View,

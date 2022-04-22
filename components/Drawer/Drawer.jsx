@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-no-bind */
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { useCountersStore } from '../../utils/stores/appStore';
 import useKmStore from '../../utils/stores/kmStore';
 // components
@@ -25,11 +24,19 @@ function Drawer() {
   }
 
   return (
-    <View>
-      <CounterButton name="Clear Counters" press={reset} />
+    <View style={styles.container}>
       <CounterButton name="swap Kms" press={swapKms} />
+      <CounterButton name="Clear Counters" press={reset} />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    padding: 50,
+  },
+});
 
 export default Drawer;
