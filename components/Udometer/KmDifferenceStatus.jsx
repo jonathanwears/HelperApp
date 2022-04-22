@@ -7,7 +7,6 @@ import useKmStore from '../../utils/stores/kmStore';
 function KmDifferenceStatus() {
   const startKm = useKmStore((state) => state.kilometers.startKm);
   const finishKm = useKmStore((state) => state.kilometers.finishKm);
-
   const [difference, setDifference] = useState(0);
 
   useEffect(() => {

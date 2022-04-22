@@ -1,23 +1,11 @@
 import { View, StyleSheet } from 'react-native';
-import useKmStore from '../../utils/stores/kmStore';
+
 import BasicAreaStyle from '../../utils/Styles/BasicAreaStyle';
 import Title from '../../utils/Styles/Title';
 import KmDifferenceStatus from './KmDifferenceStatus';
 import Udometer from './Udometer';
-import CounterButton from '../Buttons/CounterButton';
 
 function UdometerArea() {
-  const startKm = useKmStore((state) => state.kilometers.startKm);
-  const finishKm = useKmStore((state) => state.kilometers.finishKm);
-  const updateFinishKm = useKmStore((state) => state.updateKm);
-  const updateStartKm = useKmStore((state) => state.updateKm);
-
-  function swapKms() {
-    if (finishKm === 0) return;
-    updateFinishKm('finishKm', startKm);
-    updateStartKm('startKm', finishKm);
-  }
-
   const UDO_NAMES = {
     start: 'Start',
     syncStartName: 'startKm',
@@ -44,7 +32,6 @@ function UdometerArea() {
           name={UDO_NAMES.finish}
           syncName={UDO_NAMES.syncFinishName}
         />
-        <CounterButton name="Set new Day Values" press={swapKms} />
       </View>
     </View>
   );
