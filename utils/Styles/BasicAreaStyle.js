@@ -6,7 +6,6 @@ const BasicAreaStyle = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    backgroundColor: '#262626',
     padding: 10,
     margin: 2,
   },
