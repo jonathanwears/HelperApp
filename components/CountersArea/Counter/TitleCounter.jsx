@@ -15,14 +15,14 @@ const styles = StyleSheet.create({
     width: 125,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 5,
+    paddingTop: 12,
+    paddingBottom: 10,
     marginBottom: 8,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
   },
   text: {
     fontSize: 20,
-    paddingBottom: 10,
   },
 });
 

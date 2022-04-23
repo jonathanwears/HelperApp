@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const CounterTextStyle = StyleSheet.create({
   text: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 32,
     color: 'white',
   },
 });
