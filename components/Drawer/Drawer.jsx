@@ -4,6 +4,7 @@ import useKmStore from '../../utils/stores/kmStore';
 // components
 import ResetZeroCounters from '../CountersArea/ResetZeroCounters';
 import CounterButton from '../Buttons/CounterButton';
+import CopyToClipboard from '../../utils/CopyToClipboard';
 
 function Drawer() {
   const updateCounter = useCountersStore((state) => state.updateCounter);
@@ -23,10 +24,15 @@ function Drawer() {
     updateStartKm('startKm', finishKm);
   }
 
+  function copy() {
+    CopyToClipboard();
+  }
+
   return (
     <View style={styles.container}>
       <CounterButton name="swap Kms" press={swapKms} />
       <CounterButton name="Clear Counters" press={reset} />
+      <CounterButton name="Copy data" press={copy} />
     </View>
   );
 }
