@@ -12,7 +12,6 @@ function Drawer() {
 
   const { startKm, finishKm } = useKmStore((state) => state.kilometers);
   const updateKm = useKmStore((state) => state.updateKm);
-  const updateStartKm = useKmStore((state) => state.updateKm);
 
   function reset() {
     ResetZeroCounters(counters, updateCounter);
