@@ -10,9 +10,8 @@ function Drawer() {
   const updateCounter = useCountersStore((state) => state.updateCounter);
   const counters = useCountersStore((state) => state.counters);
 
-  const startKm = useKmStore((state) => state.kilometers.startKm);
-  const finishKm = useKmStore((state) => state.kilometers.finishKm);
-  const updateFinishKm = useKmStore((state) => state.updateKm);
+  const { startKm, finishKm } = useKmStore((state) => state.kilometers);
+  const updateKm = useKmStore((state) => state.updateKm);
   const updateStartKm = useKmStore((state) => state.updateKm);
 
   function reset() {
@@ -20,8 +19,8 @@ function Drawer() {
   }
 
   function swapKms() {
-    updateFinishKm('finishKm', startKm);
-    updateStartKm('startKm', finishKm);
+    updateKm('finishKm', startKm);
+    updateKm('startKm', finishKm);
   }
 
   function copy() {
