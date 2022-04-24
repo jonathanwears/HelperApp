@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     marginTop: 10,
     borderRadius: 20,
-    backgroundColor: '#262626',
+    backgroundColor: '#2e2e2e',
   },
 });
 
