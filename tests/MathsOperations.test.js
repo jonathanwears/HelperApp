@@ -1,4 +1,4 @@
-import * as Maths from '../utils/MathsOperations';
+import * as Maths from '../utils/Maths';
 
 const value = Maths.minus(10000, 5000);
 test('10000 - 5000 = 5000', () => {

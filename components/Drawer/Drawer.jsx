@@ -18,12 +18,12 @@ function Drawer() {
     CopyToClipboard();
   }
 
-  function a() {
+  function swap() {
     SwapKms();
   }
   return (
     <View style={styles.container}>
-      <CounterButton name="swap Kms" press={a} />
+      <CounterButton name="swap Kms" press={swap} />
       <CounterButton name="Clear Counters" press={reset} />
       <CounterButton name="Copy data" press={copy} />
     </View>
