@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { minus } from '../../utils/MathsOperations';
+import { minus } from '../../utils/Maths';
 import CounterTextStyle from '../../utils/Styles/CounterTextStyle';
 import useKmStore from '../../utils/stores/kmStore';
 
