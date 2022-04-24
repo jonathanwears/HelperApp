@@ -1,11 +1,11 @@
 export function increment(value) {
-  return value + 1;
+  return Number(value) + 1;
 }
 
 export function decrement(value) {
-  return Math.max(0, value - 1);
+  return Math.max(0, Number(value) - 1);
 }
 
 export function minus(value1, value2) {
-  return value1 - value2;
+  return Number(value1) - Number(value2);
 }
