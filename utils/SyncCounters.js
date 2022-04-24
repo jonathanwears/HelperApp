@@ -6,7 +6,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import counterNames from './CountersList';
 
 async function syncCounters(counter) {
-  const data = await AsyncStorage.getItem(counter);
+  let data = await AsyncStorage.getItem(counter);
+  if (data === null) data = 0;
   return data;
 }
 
