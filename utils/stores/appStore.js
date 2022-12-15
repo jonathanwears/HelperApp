@@ -13,6 +13,7 @@ function getInitialValues() {
     };
     return obj;
   }, 0);
+  //get all keys
 
   const counters = {
     counters: {
