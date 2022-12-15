@@ -1,11 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
-import MinusDownCounterIcon from '../utils/Styles/MinusDownCounterIcon';
 
 function Header() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Counter</Text>
-      <MinusDownCounterIcon />
     </View>
   );
 }
