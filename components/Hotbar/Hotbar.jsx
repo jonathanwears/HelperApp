@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
     width: '100%',
     bottom: 0,
     position: 'absolute',
-    opacity: 0.9,
   },
 });
 
