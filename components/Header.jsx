@@ -1,17 +1,15 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 function Header() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Counter</Text>
-    </View>
+    <View style={styles.container} />
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'black',
-    height: 170,
+    height: 80,
     padding: 35,
     paddingBottom: 25,
     borderBottomLeftRadius: 5,

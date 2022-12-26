@@ -3,7 +3,11 @@ import { Pressable, Image, StyleSheet } from 'react-native';
 function HotbarButton({ imgLink, onClick }) {
   return (
     <Pressable style={styles.container} onPress={onClick}>
-      <Image style={styles.img} source={imgLink} tintColor="white" />
+      <Image
+        style={styles.img}
+        source={imgLink}
+        tintColor="white"
+      />
     </Pressable>
   );
 }

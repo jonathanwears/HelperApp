@@ -15,7 +15,7 @@ function Hotbar({ drawer }) {
   const [modalVisable, setModalVisable] = useState(false);
   const counters = useCountersStore((state) => state.counters);
   const updateCounter = useCountersStore((state) => state.updateCounter);
-  const press = () => drawer.current.openDrawer();
+  // const press = () => drawer.current.openDrawer();
 
   function reset() {
     ResetZeroCounters(counters, updateCounter);
@@ -51,7 +51,7 @@ function Hotbar({ drawer }) {
       </Modal>
 
       <HotbarButton onClick={() => setModalVisable(true)} imgLink={bin} />
-      <HotbarButton onClick={press} imgLink={menu} />
+      {/* <HotbarButton onClick={press} imgLink={menu} /> */}
       <HotbarButton onClick={copyValues} imgLink={copy} />
       <HotbarButton onClick={swap} imgLink={swapImg} />
     </View>
