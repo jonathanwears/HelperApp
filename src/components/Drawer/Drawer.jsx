@@ -2,7 +2,7 @@ import { View, StyleSheet } from 'react-native';
 import { useCountersStore } from '../../utils/stores/appStore';
 // components
 import ResetZeroCounters from '../../utils/ResetZeroCounters';
-import CounterButton from '../Buttons/CounterButton';
+import CounterButton from '../Counter/CounterButton';
 import CopyToClipboard from '../../utils/CopyToClipboard';
 import SwapKms from '../../utils/SwapKms';
 
