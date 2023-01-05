@@ -1,18 +1,7 @@
 /* eslint-disable no-use-before-define */
 import { Pressable, Text, StyleSheet } from 'react-native';
-import PlusUpCounterIcon from '../../utils/Styles/PlusUpCounterIcon';
-import MinusDownCounterIcon from '../../utils/Styles/MinusDownCounterIcon';
 
-function CustomButton({ name, press }) {
-  // accepts a button name and the onpress function
-  function nameValue() {
-    switch (name) {
-      case 'Up': return <PlusUpCounterIcon />;
-      case 'Down': return <MinusDownCounterIcon />;
-      default: return name;
-    }
-  }
-
+function CounterButton({ press, Icon }) {
   return (
     <Pressable
       onPress={press}
@@ -25,7 +14,7 @@ function CustomButton({ name, press }) {
       ]}
     >
       <Text>
-        {nameValue()}
+        {Icon}
       </Text>
     </Pressable>
   );
@@ -43,4 +32,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CustomButton;
+export default CounterButton;
