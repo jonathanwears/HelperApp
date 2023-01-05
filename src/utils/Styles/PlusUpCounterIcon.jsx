@@ -1,5 +1,5 @@
 import { Image, StyleSheet } from 'react-native';
-import plus from '../../assets/icons/plus.png';
+import plus from '../../../assets/icons/plus.png';
 
 function PlusUpCounterIcon() {
   return (

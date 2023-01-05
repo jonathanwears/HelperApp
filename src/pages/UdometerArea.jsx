@@ -1,9 +1,9 @@
 import { View, StyleSheet } from 'react-native';
 
-import BasicAreaStyle from '../../utils/Styles/BasicAreaStyle';
-import Title from '../../utils/Styles/Title';
-import KmDifferenceStatus from './KmDifferenceStatus';
-import Udometer from './Udometer';
+import BasicAreaStyle from '../utils/Styles/BasicAreaStyle';
+import Title from '../utils/Styles/Title';
+import KmDifferenceStatus from '../components/Udometer/KmDifferenceStatus';
+import Udometer from '../components/Udometer/Udometer';
 
 function UdometerArea() {
   const UDO_NAMES = {

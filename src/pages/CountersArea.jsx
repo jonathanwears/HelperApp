@@ -1,8 +1,8 @@
 import { View, StyleSheet } from 'react-native';
-import Counter from './Counter/Counter';
-import counterNames from '../../utils/CountersList';
-import BasicAreaStyle from '../../utils/Styles/BasicAreaStyle';
-import Title from '../../utils/Styles/Title';
+import Counter from '../components/Counter/Counter';
+import counterNames from '../utils/CountersList';
+import BasicAreaStyle from '../utils/Styles/BasicAreaStyle';
+import Title from '../utils/Styles/Title';
 
 function CountersArea() {
   const COUNTER_NAME = 'Counters';

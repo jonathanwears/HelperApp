@@ -1,5 +1,5 @@
 import { Image, StyleSheet } from 'react-native';
-import minus from '../../assets/icons/minus.png';
+import minus from '../../../assets/icons/minus.png';
 
 function MinusDownCounterIcon() {
   return (

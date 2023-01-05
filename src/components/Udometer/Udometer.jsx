@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import KmInput from './KmInput';
-import TitleCounter from '../CountersArea/Counter/TitleCounter';
+import TitleCounter from '../Counter/TitleCounter';
 import CounterStyle from '../../utils/Styles/CounterStyle';
 import useKmStore from '../../utils/stores/kmStore';
 

@@ -1,13 +1,13 @@
 import { View, Text } from 'react-native';
-import { useCountersStore } from '../../../utils/stores/appStore';
-import { increment, decrement } from '../../../utils/Maths';
+import { useCountersStore } from '../../utils/stores/appStore';
+import { increment, decrement } from '../../utils/Maths';
 import TitleCounter from './TitleCounter';
-import CounterButton from '../../Buttons/CounterButton';
-import PlusUpCounterIcon from '../../../utils/Styles/PlusUpCounterIcon';
-import MinusDownCounterIcon from '../../../utils/Styles/MinusDownCounterIcon';
+import CounterButton from '../Buttons/CounterButton';
+import PlusUpCounterIcon from '../../utils/Styles/PlusUpCounterIcon';
+import MinusDownCounterIcon from '../../utils/Styles/MinusDownCounterIcon';
 // styles
-import CounterTextStyle from '../../../utils/Styles/CounterTextStyle';
-import CounterStyle from '../../../utils/Styles/CounterStyle';
+import CounterTextStyle from '../../utils/Styles/CounterTextStyle';
+import CounterStyle from '../../utils/Styles/CounterStyle';
 
 function Counter({ counterName }) {
   const counter = useCountersStore((state) => state.counters[counterName]);

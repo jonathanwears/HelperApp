@@ -8,14 +8,14 @@ import {
   DrawerLayoutAndroid,
 } from 'react-native';
 import { useEffect, useRef } from 'react';
-import { useCountersStore } from './utils/stores/appStore';
+import { useCountersStore } from './src/utils/stores/appStore';
 // components
-import Header from './components/Header';
-import CountersArea from './components/CountersArea/CountersArea';
-import UdometerArea from './components/Udometer/UdometerArea';
-import Hotbar from './components/Hotbar/Hotbar';
-import Drawer from './components/Drawer/Drawer';
-import useKmStore from './utils/stores/kmStore';
+import Header from './src/pages/Header';
+import CountersArea from './src/pages/CountersArea';
+import UdometerArea from './src/pages/UdometerArea';
+import Hotbar from './src/components/Hotbar/Hotbar';
+import Drawer from './src/components/Drawer/Drawer';
+import useKmStore from './src/utils/stores/kmStore';
 
 export default function App() {
   const drawer = useRef(null);
