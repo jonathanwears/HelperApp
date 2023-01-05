@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { StyleSheet, View, Modal } from 'react-native';
 import { useCountersStore } from '../../utils/stores/appStore';
 import HotbarButton from './Menu-Buttons/HotbarButton';
-import ResetZeroCounters from '../CountersArea/ResetZeroCounters';
+import ResetZeroCounters from '../../utils/ResetZeroCounters';
 import bin from '../../assets/icons/bin.png';
 import copy from '../../assets/icons/copy.png';
 import swapImg from '../../assets/icons/swap.png';
