@@ -33,7 +33,6 @@ Project is created with:
 
 ## Screenshots
 
-![Helper App](./readme/countingproject-example.png | width=950)
 <img src='./readme/countingproject-example.png' alt='Helper App' width='50%'>
 
 ## Setup
