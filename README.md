@@ -57,7 +57,7 @@ Project is: _in progress_
 
 - Counters can't be created and deleted in app
 - Modularity could be improved
-- default animations are a bit slow
+- default animations are a bit
 
 #### To Do:
 
