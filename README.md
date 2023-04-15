@@ -39,7 +39,7 @@ Project is created with:
 
 main channel has 'working' version
 dev channel has more up to date code and features. However code may be incomplete, or not run at all.
-
+zz
 This project requires expo and a mobile device. Alternatively you can use an emulator.
 To run this project, install it locally using npm:
 
