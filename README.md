@@ -28,23 +28,19 @@ Project is created with:
 
 ## Features
 
-- Counter app for keeping track of completed tasks
-- Copy infomation to clipboard
-
 ## Screenshots
 
-<img src='./readme/countingproject-example.png' alt='Helper App' width='50%'>
+![Minesweeper](./readme/minesweeper-example.png)
 
 ## Setup
 
 main channel has 'working' version
 dev channel has more up to date code and features. However code may be incomplete, or not run at all.
 
-This project requires expo and a mobile device. Alternatively you can use an emulator.
 To run this project, install it locally using npm:
 
 ```
-$ cd ../countingproject
+$ cd ../minesweeper
 $ npm install
 $ expo start
 ```
@@ -55,13 +51,13 @@ Project is: _in progress_
 
 ## Room for Improvement
 
-- Counters can't be created and deleted in app
-- Modularity could be improved
-- default animations are a bit slow
+- More consistency with modular component design
+- Slight performance hit when creating to new game
 
 #### To Do:
 
-- Change state management to allow counters to be created in app
+- Add headings
+- Continue styling
 - refactor
 
 ## Contact
