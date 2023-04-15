@@ -21,6 +21,7 @@ function Drawer() {
   function swap() {
     SwapKms();
   }
+
   return (
     <View style={styles.container}>
       <CounterButton name="swap Kms" press={swap} />
